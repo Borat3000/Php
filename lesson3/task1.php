@@ -44,9 +44,9 @@ foreach ($users as $user) {
         $new_arr[] = $user;
     }    
     // на каждой итерации в $value копируется значение элемента массива
-    var_dump($new_arr);
+    unset($user);
 }
 
-
+var_dump($new_arr );
 
 
