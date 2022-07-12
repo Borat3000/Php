@@ -47,25 +47,15 @@ for($key = 0; $key < $total_files; $key++) {
         checkSize($size) && 
         checkError($error)) {
             if (move_uploaded_file($tmp_name, "image/$file_name")){
-                echo "<pre>";
                 echo "$file_name успешно загружен";
-                echo "</pre>";
             } else {
-                echo "<pre>";
                 echo "$file_name не был загружен";
-                echo "</pre>";
             }
     } elseif (!checkType($type)) {
-        echo "<pre>";
         echo "$file_name Неподдерживаемый тип файла. Файл не был загружен";
-        echo "</pre>";
     } elseif (!checkSize($size)) {
-        echo "<pre>";
         echo "Превышен размер файла $file_name. Файл не был загружен";
-        echo "</pre>";
     } else {
-        echo "<pre>";
         echo "$file_name не был загружен из-за ошибки сервера";
-        echo "</pre>";
     }
 }
